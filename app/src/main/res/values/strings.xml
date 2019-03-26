@@ -1,0 +1,126 @@
+<resources>
+    <!--Live-->
+   <!-- <string name="app_name">TPI CUSTOMER APP</string>-->
+
+    <!--Test-->
+    <!--<string name="app_name">TPI CUSTOMER APP TEST</string>-->
+
+
+    <!--APP UPDATE STRING-->
+    <string name="msg_download_title">Downloading and installing application</string>
+    <string name="msg_app_update">Update</string>
+    <string name="msg_app_install">Install</string>
+    <string name="msg_app_later">Later</string>
+    <string name="app_update_local_type">Local Server</string>
+    <string name="app_update_store_type">Play Store</string>
+    <string name="app_update_text">New update version of this application available. Click update to upgrade now?</string>
+
+    <!--PERMISSON STRING-->
+    <string name="message_permission_denied">Give App access to your  phone, storage\n so that you can use our services</string>
+    <string name="label_tap_to_retry_permission"><![CDATA[<p align="center"><font color="#2196F3"><u>Tap here to enable permissions</u></font></p>]]> </string>
+    <string name="app_exit_toast">Press once again to exit!</string>
+
+    <!-- Screen No Internet Connection -->
+    <string name="layout_no_internet_oops">Oops!</string>
+    <string name="layout_no_internet_touch_to_retry">Try Again</string>
+    <string name="layout_no_internet_touch_to_refresh">Tap to Refresh</string>
+
+    <!--ALERT DIALOG-->
+    <string name="label_loading">Please wait…</string>
+
+    <string name="check_internet">Please check your internet connection</string>
+    <string name="alertMessage_no_records">There are no items in the cart</string>
+    <string name="alertMessage_no_records_summary">There are no items in order summary</string>
+    <string name="cant_place_order">You can\'t place the order for this date.!</string>
+
+
+    <!--LOGIN-->
+    <string name="label_login">Login</string>
+    <string name="label_password">Password</string>
+    <string name="label_username">Username</string>
+    <string name="alert_message_empty_user_name">Please enter your user name</string>
+    <string name="alert_message_empty_password">Please enter your password</string>
+    <string name="alert_message_Invalid_crenditals">Invalid crenditals</string>
+    <string name="label_CheckBox_RememberMe">Remember me</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="label_welcome">Welcome</string>
+    <string name="label_nodata">No Data Available Here!</string>
+
+    <!--order page-->
+    <string name="label_pending_qty">Pending qty</string>
+    <string name="label_model_name">Model Name</string>
+    <string name="search">search</string>
+    <string name="alert_message_NoQuantity_Add">Please enter your order quantity</string>
+    <string name="alert_message_ValidQuantity_Add">Please enter valid order quantity</string>
+
+    <!--Add Cart page-->
+    <string name="delete">DELETE</string>
+    <string name="label_order_summary">ORDER SUMMARY</string>
+    <string name="label_dashboard">Dashboard</string>
+    <string name="label_order_page">Order</string>
+    <string name="label_add_cart_page">MY CART</string>
+    <string name="label_add_cart__detail_page">Add Cart Detail</string>
+    <string name="label_booking_history">BOOKING HISTORY</string>
+
+    <string name="label_ship_address">Ship Address </string>
+    <string name="label_total_model">Total Model </string>
+    <string name="label_supply_from">Ship To </string>
+    <string name="label_total_qty">Total Qty </string>
+    <string name="label_date">Date </string>
+    <string name="label_sno">S.NO</string>
+    <string name="label_model_Name">Model Name</string>
+    <string name="label_qty">QTY</string>
+
+    <string name="label_select_date">Please select date</string>
+    <string name="label_confirm">Confirm</string>
+    <string name="label_delete">Are you sure, you want to delete?</string>
+    <string name="label_order_qty">Order QTY</string>
+    <string name="label_pending_quantity">Pending quantity : </string>
+    <string name="label_add_item">Are you sure, you want to add new item?</string>
+    <string name="label_item_remove">Item removed successfully</string>
+    <string name="label_item_update">Your order quantity has been updated successfully</string>
+    <string name="label_item_confirm">Your order has been confirmed. Order request number : </string>
+    <string name="label_enter_qty">Enter your order quantity </string>
+    <string name="label_enter_qty_item">Please enter your order quantity </string>
+    <string name="label_check_qty_item">Please check your order quantity</string>
+
+
+    <string name="font_opensans_regular">OpenSans_Regular.ttf</string>
+    <string name="font_opensans_light">OpenSans_Light.ttf</string>
+    <string name="font_opensans_semibold">OpenSans_SemiBold.ttf</string>
+    <string name="font_opensans_bold">OpenSans_Bold.ttf</string>
+
+    <!--Order Summary Page-->
+    <string name="label_CardView_show">Show Details</string>
+    <string name="label_CardView_hide">Hide Details</string>
+    <string name="alert_message_confirm">Are you sure, you want to confirm? </string>
+    <string name="text_TPITextView">XX</string>
+    <string name="text_empty_semicolon">:</string>
+
+    <!--Dashboard page-->
+    <string name="alert_message_logout">Are you sure, you want to logout?</string>
+    <string name="textview_message_NoInternetConnection">No Internet Connection</string>
+    <string name="finger_print_authentication">Finger Print Authentication</string>
+    <string name="label_enable_disable">Finger print authentication Enable/Disable</string>
+    <string name="touch_the_fingerprint_sensor">Touch the fingerprint sensor.</string>
+    <string name="s_no">S.No</string>
+    <string name="request_no">Request No</string>
+    <string name="request_details">Request Details</string>
+    <string name="date">Date</string>
+    <string name="total_qty">Total Qty</string>
+    <string name="model_name">Model Name</string>
+    <string name="qty">Qty</string>
+    <string name="show_booking_details">Show Booking Details</string>
+    <string name="hide_booking_details">Hide Booking Details</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="ship_to">Ship to</string>
+    <string name="no_history_avilable">No History Avilable.!</string>
+    <string name="from_date">From Date</string>
+    <string name="to_date">To Date</string>
+    <string name="invalid_date_selection">Invalid Date Selection</string>
+    <string name="invalid_todate">ToDate Selection is Invalid. \nPlease Select a Valid ToDate.</string>
+    <string name="no_data_found">No Data Found!</string>
+
+
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#36648b</color>
+    <color name="app_theme_color">#00BCD4</color>
+    <color name="red_dark">#9a060d</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dark_oriange">#FF7F00</color>
+    <color name="dark_grey">#6D6D6D</color>
+
+    <color name="blue_end">#0b4fab</color>
+    <color name="blue_start">#0a2a55</color>
+
+    <color name="light_grey">#C7C7CD</color>
+    <color name="light_gray">#EDEDEF</color>
+
+    <color name="tab_background">#6036B2</color>
+    <color name="green">#1B6923</color>
+
+    <!--Add cart color-->
+    <color name="item_name">#535353</color>
+    <color name="description">#a9a9a9</color>
+    <color name="bg_row_background">#fa315b</color>
+    <color name="red">#EC0000</color>
+    <color name="confirm">#FF8800</color>
+
+
+    <!--SnackBar-->
+    <color name="snack_bar_retry_color">#e9d7353c</color>
+    <color name="snack_bar_bg_color">#323232</color>
+
+</resources>

@@ -1,0 +1,198 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context="com.angler.ti_customer.fragment.TPI_DashboardFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="visible"
+            app:elevation="4dp">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/fragment_dashboard_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_start"
+                app:titleTextColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dash_toolbar_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_toLeftOf="@+id/dash_logout_img"
+                        android:layout_toStartOf="@+id/dash_logout_img"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/dash_history_img"
+                        android:layout_width="37.5dp"
+                        android:layout_height="37.5dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="center"
+                        android:layout_marginEnd="100dp"
+                        android:layout_marginRight="100dp"
+                        android:layout_toLeftOf="@+id/order_addcart_img"
+                        android:layout_toStartOf="@+id/order_addcart_img"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_history"
+                        android:tint="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/order_addcart_img"
+                        android:layout_width="@dimen/add_cart_width"
+                        android:layout_height="@dimen/add_cart_height"
+                        android:layout_gravity="right"
+                        android:layout_toLeftOf="@+id/dash_settins_img"
+                        android:layout_toStartOf="@+id/dash_settins_img"
+                        android:padding="@dimen/magrin5"
+                        android:src="@drawable/ic_cart_order"
+                        android:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/addcart_badge_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/dash_settins_img"
+                        android:layout_toStartOf="@+id/dash_settins_img"
+                        android:background="@drawable/badge_circle"
+                        android:textColor="@color/confirm"
+                        android:textSize="@dimen/text_size_too_small"
+                        android:textStyle="normal" />
+
+
+                    <ImageView
+                        android:id="@+id/dash_settins_img"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_toLeftOf="@+id/dash_logout_img"
+                        android:layout_toStartOf="@+id/dash_logout_img"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_settings_white"
+                        android:tint="@color/white"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/dash_logout_img"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/padd_10"
+                        android:layout_marginRight="@dimen/padd_10"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_logout"
+                        android:tint="@color/white" />
+
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar">
+
+            <LinearLayout
+                android:id="@+id/layout_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/dashboard_image_height"
+                    android:layout_height="@dimen/dashboard_image_height"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/padd_10"
+                    android:gravity="center"
+                    android:src="@drawable/ic_logo_blue" />
+
+                <TextView
+                    android:id="@+id/layout_tel_header_TXT_version_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padd_10"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/blue_start"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/layout_tel_header_TXT_name_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="@string/label_welcome"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/blue_start"
+                    android:textStyle="bold|italic" />
+
+                <TextView
+                    android:id="@+id/layout_tel_user_TXT_name_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/blue_start"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/fragment_dash_swipeRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_header"
+                android:visibility="visible">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fragment_dashboard_RV"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/include_layout"
+        layout="@layout/fragment_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</android.support.design.widget.CoordinatorLayout>

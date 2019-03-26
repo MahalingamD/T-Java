@@ -1,0 +1,107 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.3'
+    defaultConfig {
+          applicationId "com.angler.ti_customer_test"
+       // applicationId "com.angler.ti_customer"
+        minSdkVersion 16
+        versionCode 2
+        versionName "1.1"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+    }
+
+    defaultPublishConfig "release"
+
+    buildTypes {
+
+        debug {
+
+            minifyEnabled false
+            useProguard false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            //Test
+              buildConfigField "String", "common_url", '"http://115.112.233.242:600/tpi_customer/api/TPI_Customer/"'
+              buildConfigField "String", "AddCart_url", '"http://115.112.233.242:600/tpi_customer/api/"'
+              buildConfigField "String", "AppUpdate_url", '"http://www.tiiema.in/ti_mobile_app_admin_test/api/AppVersionUpdate/"'
+              buildConfigField "String", "AppInsert_url", '" http://www.tiiema.in/ti_mobile_app_admin_test/api/"'
+              buildConfigField "String", "APP_Id", '"2"'
+              buildConfigField "String", "Device_Type", '"A"'
+
+               resValue "string", "app_name", "TPI CUSTOMER APP TEST"
+
+           /* //Live
+            buildConfigField "String", "common_url", '"http://www.tiiema.in/tpi_customer_order_booking/api/TPI_Customer/"'
+            buildConfigField "String", "AddCart_url", '"http://www.tiiema.in/tpi_customer_order_booking/api/"'
+            buildConfigField "String", "AppUpdate_url", '"http://www.tiiema.in/ti_mobile_app_admin/api/AppVersionUpdate/"'
+            buildConfigField "String", "AppInsert_url", '" http://www.tiiema.in/ti_mobile_app_admin/api/"'
+            buildConfigField "String", "APP_Id", '"2"'
+            buildConfigField "String", "Device_Type", '"A"'
+
+            resValue "string", "app_name", "TPI CUSTOMER APP"*/
+
+        }
+    }
+}
+
+repositories {
+    maven { url "https://jitpack.io" }
+}
+
+
+ext {
+    supportLibraryVersion = '26.1.0'
+    multidex = '1.0.3'
+    gsonVersion = '2.7'
+    picassoVersion = '2.5.2'
+    glideVersion = '3.7.0'
+    volleyVersion = '1.0.19'
+    butterknifeVersion = '8.8.1'
+    moshiVersion = '1.5.0'
+    constraintLayoutVersion = '1.1.3'
+    progressVersion = '1.7'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:design:$supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+    implementation "com.android.support:support-v13:$supportLibraryVersion"
+    implementation "com.android.support:support-v4:$supportLibraryVersion"
+    implementation "com.android.support:multidex:$multidex"
+    implementation "com.google.code.gson:gson:$gsonVersion"
+    implementation "com.squareup.picasso:picasso:$picassoVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+
+    implementation "com.jakewharton:butterknife:$butterknifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$butterknifeVersion"
+    implementation "com.squareup.moshi:moshi:$moshiVersion"
+    implementation "com.mcxiaoke.volley:library:$volleyVersion"
+
+    implementation "com.pnikosis:materialish-progress:$progressVersion"
+    implementation "com.android.support.constraint:constraint-layout:$constraintLayoutVersion"
+    implementation('com.auron:permission-manage:1.1.7') {
+        exclude module: 'appcompat-v7'
+    }
+    implementation('com.github.afollestad.material-dialogs:core:0.9.4.3@aar') {
+        transitive = true
+    }
+    implementation 'com.daimajia.swipelayout:library:1.2.0@aar'
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation project(':RippleLibrary')
+}

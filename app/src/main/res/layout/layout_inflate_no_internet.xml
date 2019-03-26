@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_inflate_no_internrt_LAY_main"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="#349ACC"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/layout_inflate_no_internrt_main_LAY"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:padding="5dp"
+            android:text="@string/layout_no_internet_oops"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <!--<pl.droidsonroids.gif.GifImageView
+            android:id="@+id/layout_inflate_no_internet_IMG"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:contentDescription="@null" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/layout_inflate_server_not_reachable_IMG"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/transparent"
+            android:clickable="false"
+            android:contentDescription="@null"
+            android:visibility="gone" />-->
+
+        <ImageView
+            android:id="@+id/layout_inflate_server_no_data_IMG"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:background="@mipmap/ic_no_internet"
+            android:clickable="false"
+            android:contentDescription="@null"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Oops!"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/layout_inflate_no_internet_TXT_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/layout_inflate_no_internet_TXT_tap_to_retry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/layout_no_internet_touch_to_retry"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_try_agin_border"
+            android:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

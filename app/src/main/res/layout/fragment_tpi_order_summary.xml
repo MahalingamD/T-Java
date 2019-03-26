@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_root_layout"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            android:visibility="visible"
+            app:elevation="@dimen/elevation_AppBarLayout_OrderSummary">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/fragment_order_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_start"
+                app:titleTextColor="@color/white">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/order_back_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:padding="@dimen/magrin5"
+                        android:src="@drawable/ic_action_back_arrow" />
+
+                    <TextView
+                        android:id="@+id/order_toolbar_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_gravity="center"
+                        android:layout_toEndOf="@id/order_back_image"
+                        android:layout_toRightOf="@id/order_back_image"
+                        android:padding="@dimen/magrin5"
+                        android:textAllCaps="true"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <RelativeLayout
+            android:id="@+id/orderpage_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar">
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/show_hide_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginBottom="@dimen/magrin5"
+            android:layout_marginLeft="@dimen/padd_10"
+            android:layout_marginRight="@dimen/padd_10"
+            android:layout_marginTop="@dimen/magrin5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padd_10"
+                android:weightSum="1">
+
+                <com.angler.ti_customer.utils.TPITextView
+                    android:id="@+id/tpitextView"
+                    android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_size_medium"
+                    android:textStyle="bold"
+                    app:fonts="@string/font_opensans_bold" />
+
+                <ImageView
+                    android:id="@+id/upArrow"
+                    android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_up"
+                    android:tint="@color/colorAccent"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/downArrow"
+                    android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_down"
+                    android:tint="@color/colorAccent"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/layout_address_header_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/show_hide_layout"
+            android:layout_margin="@dimen/padd_10"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/layout_address_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/magrin5"
+                android:paddingTop="@dimen/magrin5">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magrin3"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_marginLeft"
+                        android:layout_marginStart="@dimen/layout_marginLeft"
+                        android:layout_weight="0.41"
+                        android:gravity="left"
+                        android:text="@string/label_ship_address"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small"
+                        app:fonts="@string/font_opensans_semibold" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text="@string/text_empty_semicolon"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:id="@+id/fragment_ship_to_address_TXT"
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magrin5"
+                        android:layout_marginRight="@dimen/magrin5"
+                        android:layout_weight="0.75"
+                        android:text="@string/text_TPITextView"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_too_small"
+                        app:fonts="@string/font_opensans_bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magrin3"
+                    android:layout_weight="1">
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_marginLeft"
+                        android:layout_marginStart="@dimen/layout_marginLeft"
+                        android:layout_weight="0.41"
+                        android:gravity="left"
+                        android:text="@string/label_supply_from"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small"
+                        app:fonts="@string/font_opensans_semibold" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text="@string/text_empty_semicolon"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:id="@+id/fragment_ship_from_address_TXT"
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magrin5"
+                        android:layout_marginRight="@dimen/magrin5"
+                        android:layout_weight="0.75"
+                        android:text="@string/text_TPITextView"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_too_small"
+                        app:fonts="@string/font_opensans_bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magrin3"
+                    android:layout_weight="1">
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_marginLeft"
+                        android:layout_marginStart="@dimen/layout_marginLeft"
+                        android:layout_weight="0.40"
+                        android:gravity="left"
+                        android:text="@string/label_total_model"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small"
+                        app:fonts="@string/font_opensans_semibold" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text="@string/text_empty_semicolon"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:id="@+id/fragment_total_model_TXT"
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magrin5"
+                        android:layout_weight="0.75"
+                        android:text="@string/text_TPITextView"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_too_small"
+                        app:fonts="@string/font_opensans_bold" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magrin3"
+                    android:layout_weight="1">
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_marginLeft"
+                        android:layout_marginStart="@dimen/layout_marginLeft"
+                        android:layout_weight="0.40"
+                        android:gravity="left"
+                        android:text="@string/label_total_qty"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small"
+                        app:fonts="@string/font_opensans_semibold" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text="@string/text_empty_semicolon"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:id="@+id/fragment_total_qty_TXT"
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magrin5"
+                        android:layout_weight="0.75"
+                        android:text="@string/text_TPITextView"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_too_small"
+                        app:fonts="@string/font_opensans_bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/magrin3">
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/layout_marginLeft"
+                        android:layout_marginStart="@dimen/layout_marginLeft"
+                        android:layout_weight="0.40"
+                        android:gravity="left"
+                        android:text="@string/label_date"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small"
+                        app:fonts="@string/font_opensans_semibold" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.05"
+                        android:text="@string/text_empty_semicolon"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_small" />
+
+                    <com.angler.ti_customer.utils.TPITextView
+                        android:id="@+id/fragment_date_TXT"
+                        android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/magrin5"
+                        android:layout_weight="0.75"
+                        android:text="@string/text_TPITextView"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/text_size_too_small"
+                        android:textStyle="bold"
+                        app:fonts="@string/font_opensans_bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <View
+            android:id="@+id/layout_split"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout_height_one_OrderSummary"
+            android:layout_below="@+id/layout_address_header_card"
+            android:layout_marginTop="@dimen/magrin5"
+            android:background="@color/white"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_split"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/magrin5"
+            android:paddingLeft="@dimen/magrin5"
+            android:paddingTop="@dimen/magrin5"
+            android:weightSum="4">
+
+            <com.angler.ti_customer.utils.TPITextView
+                android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:gravity="center"
+                android:text="@string/label_sno"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                app:fonts="@string/font_opensans_bold" />
+
+            <com.angler.ti_customer.utils.TPITextView
+                android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                android:layout_height="wrap_content"
+                android:layout_weight="2.0"
+                android:gravity="center"
+                android:text="@string/label_model_Name"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                app:fonts="@string/font_opensans_bold" />
+
+            <com.angler.ti_customer.utils.TPITextView
+                android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:gravity="center"
+                android:text="@string/label_qty"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_small"
+                app:fonts="@string/font_opensans_bold" />
+
+            <com.angler.ti_customer.utils.TPITextView
+                android:layout_width="@dimen/layout_width_zero_OrderSummary"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_medium1"
+                app:fonts="@string/font_opensans_bold" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_order_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/fragment_footer"
+            android:layout_below="@+id/header"
+            android:orientation="vertical"
+            app:reverseLayout="false" />
+
+
+        <RelativeLayout
+            android:id="@+id/fragment_footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/magrin12"
+            android:layout_marginRight="@dimen/magrin12"
+            android:background="@color/white"
+            android:padding="@dimen/magrin5">
+
+
+            <Button
+                android:id="@+id/fragment_summary_confirm_BTN"
+                android:layout_width="@dimen/button_width_ConfirmButton"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="@dimen/padd_10"
+                android:layout_marginRight="@dimen/padd_10"
+                android:background="@drawable/button_confirm"
+                android:text="@string/label_confirm"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_medium"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <com.andexert.library.RippleView
+                android:id="@+id/fragment_summary_add_new_RPLV"
+                android:layout_width="@dimen/layout_width_Rippleview"
+                android:layout_height="@dimen/layout_width_Rippleview"
+                android:layout_alignParentLeft="true"
+                android:layout_gravity="center"
+                app:rv_color="@color/light_gray"
+                app:rv_rippleDuration="200"
+                app:rv_type="rectangle"
+                app:rv_zoom="true">
+
+                <ImageView
+                    android:id="@+id/fragment_summary_add_new_IMG"
+                    android:layout_width="@dimen/layout_widthHeight_ImageView_Rippleview"
+                    android:layout_height="@dimen/layout_widthHeight_ImageView_Rippleview"
+                    android:layout_alignParentLeft="true"
+                    android:src="@drawable/add_button"
+                    android:tint="@color/blue_end" />
+            </com.andexert.library.RippleView>
+
+
+            <com.andexert.library.RippleView
+                android:id="@+id/fragment_summary_confirm_IMG_RPLV"
+                android:layout_width="@dimen/layout_width_Rippleview"
+                android:layout_height="@dimen/layout_width_Rippleview"
+                android:layout_alignParentRight="true"
+                app:rv_color="@color/light_gray"
+                app:rv_rippleDuration="200"
+                app:rv_type="rectangle"
+                app:rv_zoom="true">
+
+                <ImageView
+                    android:id="@+id/fragment_summary_confirm_IMG"
+                    android:layout_width="@dimen/layout_widthHeight_ImageView_Rippleview"
+                    android:layout_height="@dimen/layout_widthHeight_ImageView_Rippleview"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/confirm"
+                    android:tint="@color/blue_end" />
+            </com.andexert.library.RippleView>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
